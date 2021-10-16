@@ -2,8 +2,8 @@ The Let’s Encrypt project
 ==================
 .. toctree::
    :maxdepth: 2
+   :hidden:
 
-   index.rst
    intro.rst
    using.rst
    contributing.rst
