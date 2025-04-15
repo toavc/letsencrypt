@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Encrypt Resource Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts - Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo-container">
+                <img src="letsencrypt-logo-horizontal.svg" alt="Let's Encrypt Logo" class="logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#welcome" class="active"><i class="fas fa-home"></i> Welcome</a></li>
+                    <li><a href="#what-is"><i class="fas fa-info-circle"></i> What is Let's Encrypt?</a></li>
+                    <li><a href="#key-features"><i class="fas fa-key"></i> Key Features</a></li>
+                    <li><a href="#latest-news"><i class="fas fa-newspaper"></i> Latest News</a></li>
+                    <li><a href="#core-resources"><i class="fas fa-bookmark"></i> Core Resources</a></li>
+                    <li><a href="#technical-info"><i class="fas fa-cogs"></i> Technical Information</a></li>
+                    <li><a href="#getting-started"><i class="fas fa-rocket"></i> Getting Started</a></li>
+                    <li><a href="#global-usage"><i class="fas fa-globe-americas"></i> Global Usage</a></li>
+                    <li><a href="#faq"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="social-icons">
+                    <a href="https://twitter.com/letsencrypt" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://github.com/letsencrypt" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://community.letsencrypt.org/" target="_blank"><i class="fas fa-users"></i></a>
+                </div>
+            </div>
+        </aside>
+        <main class="content">
+            <section id="welcome">
+                <h1>Welcome to the Let's Encrypt Resource Hub!</h1>
+                <p class="intro">A curated collection of the latest resources and information about Let's Encrypt and web security.</p>
+                
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <div class="stat-number" id="websites-count">550M+</div>
+                        <div class="stat-label">Websites Protected</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Free Certificates</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">240M+</div>
+                        <div class="stat-label">Active Certificates</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">10</div>
+                        <div class="stat-label">Years of Service</div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="what-is">
+                <h2>What is Let's Encrypt?</h2>
+                <p>Let's Encrypt is a free, automated, and open Certificate Authority (CA) run by the nonprofit Internet Security Research Group (ISRG). It provides X.509 certificates for Transport Layer Security (TLS) encryption at no charge, making it possible for websites to enable HTTPS encryption easily. As the world's largest certificate authority, Let's Encrypt is used by more than 550 million websites, significantly contributing to a more secure and privacy-respecting internet.</p>
+                
+                <div class="video-container">
+                    <!-- Centering and sizing wrapper for the iframe -->
+                    <div class="video-wrapper">
+                        <iframe
+                            src="https://www.youtube.com/embed/jrR_WfgmWEw"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </section>
+
+            <section id="key-features">
+                <h2>Key Features</h2>
+                <div class="keypoints-container">
+                    <div class="keypoint-card">
+                        <div class="keypoint-icon">
+                            <i class="fas fa-infinity"></i>
+                        </div>
+                        <h3>Free Forever</h3>
+                        <p>Certificates are provided at zero cost, removing financial barriers to secure websites.</p>
+                        <div class="keypoint-more">
+                            <p>Let's Encrypt's mission is to create a more secure and privacy-respecting web by promoting widespread adoption of HTTPS. By eliminating costs, any website owner can secure their site, regardless of budget constraints.</p>
+                        </div>
+                        <button class="keypoint-toggle">Learn More</button>
+                    </div>
+                    <div class="keypoint-card">
+                        <div class="keypoint-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>Fully Automated</h3>
+                        <p>Software running on the web server can interact with Let's Encrypt to obtain certificates, securely configure them, and automatically renew them.</p>
+                        <div class="keypoint-more">
+                            <p>The ACME protocol (Automated Certificate Management Environment) enables automatic certificate issuance and renewal without human intervention, significantly reducing the risk of expired certificates and security lapses.</p>
+                        </div>
+                        <button class="keypoint-toggle">Learn More</button>
+                    </div>
+                    <div class="keypoint-card">
+                        <div class="keypoint-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Secure & Transparent</h3>
+                        <p>Let's Encrypt serves as a platform for advancing TLS security best practices through both server and client implementation.</p>
+                        <div class="keypoint-more">
+                            <p>All certificates issued or revoked are publicly recorded and available for anyone to inspect through Certificate Transparency logs. This transparency helps maintain the integrity of the web PKI ecosystem and enables rapid detection of misissued certificates.</p>
+                        </div>
+                        <button class="keypoint-toggle">Learn More</button>
+                    </div>
+                    <div class="keypoint-card">
+                        <div class="keypoint-icon">
+                            <i class="fas fa-code-branch"></i>
+                        </div>
+                        <h3>Open Source & Cooperative</h3>
+                        <p>All issuance and renewal protocols are published as open standards that others can adopt.</p>
+                        <div class="keypoint-more">
+                            <p>The ACME protocol developed by Let's Encrypt has been standardized through the IETF as RFC 8555. The Let's Encrypt client software (Certbot) and server software (Boulder) are all open source, enabling community contribution and transparency in operation.</p>
+                        </div>
+                        <button class="keypoint-toggle">Learn More</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="latest-news">
+                <h2>Latest News & Developments</h2>
+                <div class="card-container">
+                    <div class="card news-card">
+                        <h3>Short-Lived Certificates Coming in 2025</h3>
+                        <p>Let's Encrypt has announced a new offering of certificates with a lifetime of just six days, compared to their standard 90-day certificates. This change will enhance TLS ecosystem security by minimizing exposure during key compromise events.</p>
+                        <a href="https://www.schneier.com/blog/archives/2024/12/short-lived-certificates-coming-to-lets-encrypt.html" class="btn">Read More</a>
+                    </div>
+                    
+                    <div class="card news-card">
+                        <h3>New Issuance Chains Deployment (June 6, 2024)</h3>
+                        <p>Let's Encrypt will switch to using new intermediate certificates on June 6, 2024. Most subscribers won't need to take any action as ACME clients will automatically configure the new intermediates when certificates are renewed.</p>
+                        <a href="https://letsencrypt.org/2024/04/12/changes-to-issuance-chains/" class="btn">Read More</a>
+                    </div>
+                    
+                    <div class="card news-card">
+                        <h3>OCSP Support Ending in 2025</h3>
+                        <p>The Online Certificate Status Protocol (OCSP) support will be phased out beginning January 2025, with complete termination by August 6, 2025. Certificate Revocation Lists (CRLs) will be used for certificate revocation instead.</p>
+                        <a href="https://www.linux-magazin.de/news/lets-encrypt-projekt-beendet-ocsp-unterstuetzung-2025/" class="btn">Read More</a>
+                    </div>
+                    
+                    <div class="card news-card">
+                        <h3>10th Anniversary Approaching</h3>
+                        <p>Let's Encrypt is approaching its 10th anniversary in 2025, having made significant progress in its mission to secure the web through free certificates.</p>
+                        <a href="https://letsencrypt.org" class="btn">Read More</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="core-resources">
+                <h2>Core Resources</h2>
+                <ul class="resource-list">
+                    <li>
+                        <div class="resource-title">
+                            <span class="icon"><i class="fas fa-file-alt"></i></span>
+                            <a href="https://letsencrypt.org">Official Let's Encrypt Website</a>
+                        </div>
+                        <p>The main website provides comprehensive information about Let's Encrypt services, documentation, and how to get started with obtaining certificates.</p>
+                    </li>
+                    <li>
+                        <div class="resource-title">
+                            <span class="icon"><i class="fas fa-search"></i></span>
+                            <a href="https://letsencrypt.org/how-it-works/">How It Works</a>
+                        </div>
+                        <p>A detailed explanation of the ACME protocol and how Let's Encrypt validates domain ownership and issues certificates automatically.</p>
+                    </li>
+                    <li>
+                        <div class="resource-title">
+                            <span class="icon"><i class="fas fa-newspaper"></i></span>
+                            <a href="https://letsencrypt.org/blog/">Let's Encrypt Blog</a>
+                        </div>
+                        <p>The official blog featuring the latest announcements, technical information, and milestone achievements from the Let's Encrypt team.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="technical-info">
+                <h2>Technical Information</h2>
+                <ul class="resource-list">
+                    <li>
+                        <div class="resource-title">
+                            <span class="icon"><i class="fas fa-lock"></i></span>
+                            <a href="https://letsencrypt.org/2024/04/12/changes-to-issuance-chains/">Certificate Chain of Trust</a>
+                        </div>
+                        <p>Information about Let's Encrypt's root certificates (ISRG Root X1 for RSA and ISRG Root X2 for ECDSA) and their intermediate certificates structure.</p>
+                    </li>
+                    <li>
+                        <div class="resource-title">
+                            <span class="icon"><i class="fas fa-info-circle"></i></span>
+                            <a href="https://letsencrypt.org/about/">About Let's Encrypt</a>
+                        </div>
+                        <p>Details about Let's Encrypt's founding principles: free, automatic, secure, transparent, open, and cooperative approach to certificate issuance.</p>
+                    </li>
+                    <li>
+                        <div class="resource-title">
+                            <span class="icon"><i class="fas fa-book"></i></span>
+                            <a href="https://en.wikipedia.org/wiki/Let's_Encrypt">Let's Encrypt on Wikipedia</a>
+                        </div>
+                        <p>Comprehensive background information about Let's Encrypt's history, technology, and organizational structure.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="getting-started">
+                <h2>Getting Started</h2>
+                <div class="step-by-step">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Choose an ACME Client</h3>
+                            <p>Certbot is the most popular client, but there are many alternatives depending on your environment.</p>
+                            <a href="https://letsencrypt.org/docs/client-options/" class="btn">View Client Options</a>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Install the Client</h3>
+                            <p>Follow the installation instructions for your chosen client on your server.</p>
+                            <a href="https://certbot.eff.org/instructions" class="btn">Certbot Installation Guide</a>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Request a Certificate</h3>
+                            <p>Run the client to request and install your certificate automatically.</p>
+                            <div class="code-block">
+                                <pre><code>sudo certbot --apache</code></pre>
+                                <button class="copy-btn" data-clipboard-text="sudo certbot --apache">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Verify Automatic Renewal</h3>
+                            <p>Ensure that automatic renewal is working correctly on your server.</p>
+                            <div class="code-block">
+                                <pre><code>sudo certbot renew --dry-run</code></pre>
+                                <button class="copy-btn" data-clipboard-text="sudo certbot renew --dry-run">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="getting-started-container">
+                    <div class="getting-started-card">
+                        <h3>Getting Started Guide</h3>
+                        <p>A beginner-friendly guide explaining how to obtain your first SSL/TLS certificate and implement it on your website.</p>
+                        <a href="https://letsencrypt.org" class="btn primary-btn">View Guide</a>
+                    </div>
+                    <div class="getting-started-card">
+                        <h3>Certbot</h3>
+                        <p>Information about the recommended ACME client for obtaining Let's Encrypt certificates on Linux web servers with minimal configuration.</p>
+                        <a href="https://letsencrypt.org/how-it-works/" class="btn primary-btn">Learn About Certbot</a>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="global-usage">
+                <h2>Global Usage</h2>
+                <p>Let's Encrypt has become the world's most popular certificate authority, securing websites across all continents.</p>
+                <div class="map-container">
+                    <div class="world-map">
+                        <div class="map-point" style="top: 30%; left: 25%;" data-region="North America" data-percentage="32%">
+                            <div class="map-tooltip">North America: 32% of certificates</div>
+                        </div>
+                        <div class="map-point" style="top: 50%; left: 23%;" data-region="South America" data-percentage="8%">
+                            <div class="map-tooltip">South America: 8% of certificates</div>
+                        </div>
+                        <div class="map-point" style="top: 30%; left: 48%;" data-region="Europe" data-percentage="35%">
+                            <div class="map-tooltip">Europe: 35% of certificates</div>
+                        </div>
+                        <div class="map-point" style="top: 40%; left: 60%;" data-region="Asia" data-percentage="20%">
+                            <div class="map-tooltip">Asia: 20% of certificates</div>
+                        </div>
+                        <div class="map-point" style="top: 60%; left: 65%;" data-region="Australia" data-percentage="3%">
+                            <div class="map-tooltip">Australia: 3% of certificates</div>
+                        </div>
+                        <div class="map-point" style="top: 55%; left: 45%;" data-region="Africa" data-percentage="2%">
+                            <div class="map-tooltip">Africa: 2% of certificates</div>
+                        </div>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Whole_world_-_land_and_oceans_12000.jpg/1280px-Whole_world_-_land_and_oceans_12000.jpg" alt="World Map">
+                    </div>
+                </div>
+                <div class="usage-facts">
+                    <div class="fact">
+                        <i class="fas fa-server"></i>
+                        <h3>Top 1 Million Websites</h3>
+                        <p>Over 20% of the top 1 million websites now use Let's Encrypt certificates</p>
+                    </div>
+                    <div class="fact">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Growth Rate</h3>
+                        <p>Certificate issuance has grown by approximately 40% year over year</p>
+                    </div>
+                    <div class="fact">
+                        <i class="fas fa-globe"></i>
+                        <h3>Market Share</h3>
+                        <p>Let's Encrypt holds approximately 60% of the SSL certificate market</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="faq">
+                <h2>Frequently Asked Questions</h2>
+                <div class="accordion-container">
+                    <div class="accordion">
+                        <div class="accordion-header">
+                            <h3>How long are Let's Encrypt certificates valid?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Standard Let's Encrypt certificates are valid for 90 days from the date of issuance. The short validity period encourages automation and ensures that compromised keys have a limited lifetime. Let's Encrypt recommends configuring automatic renewal to occur when certificates have 30 days of validity remaining.</p>
+                            <p>In 2025, Let's Encrypt will also start offering short-lived certificates with a 6-day validity period for even greater security.</p>
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <div class="accordion-header">
+                            <h3>Are wildcard certificates supported?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Yes, Let's Encrypt supports wildcard certificates, which secure a domain and all its first-level subdomains (e.g., *.example.com). Wildcard certificates require DNS-based validation using the DNS-01 challenge type, as this proves control over the entire domain namespace.</p>
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <div class="accordion-header">
+                            <h3>Is there a rate limit for certificate issuance?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Yes, Let's Encrypt implements rate limits to ensure fair use of their service:</p>
+                            <ul>
+                                <li>50 certificates per registered domain per week</li>
+                                <li>5 duplicate certificates per week</li>
+                                <li>5 failed validations per account, per hostname, per hour</li>
+                                <li>New orders are limited to 300 per account every 3 hours</li>
+                            </ul>
+                            <p>These limits are designed to prevent abuse while allowing legitimate usage patterns.</p>
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <div class="accordion-header">
+                            <h3>How does Let's Encrypt verify domain ownership?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Let's Encrypt verifies domain ownership through challenges defined in the ACME protocol:</p>
+                            <ul>
+                                <li><strong>HTTP-01 Challenge:</strong> Places a specific file at a well-known URI on the web server</li>
+                                <li><strong>DNS-01 Challenge:</strong> Adds a specific TXT record to the domain's DNS configuration</li>
+                                <li><strong>TLS-ALPN-01 Challenge:</strong> Uses TLS-based validation for specialized cases</li>
+                            </ul>
+                            <p>Once verification is complete, Let's Encrypt issues the certificate.</p>
+                        </div>
+                    </div>
+                    <div class="accordion">
+                        <div class="accordion-header">
+                            <h3>How is Let's Encrypt funded?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>Let's Encrypt is funded by sponsors and community donations. Major sponsors include Google, Amazon Web Services, Mozilla, Cisco, Facebook, and OVH. The Internet Security Research Group (ISRG), which operates Let's Encrypt, is a 501(c)(3) nonprofit organization dedicated to reducing financial, technological, and educational barriers to secure communication over the internet.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                <p>This resource hub will be updated as new developments in the Let's Encrypt ecosystem emerge.</p>
+                <div class="footer-links">
+                    <a href="https://letsencrypt.org/contact/">Contact</a>
+                    <a href="https://letsencrypt.org/privacy-policy/">Privacy Policy</a>
+                    <a href="https://letsencrypt.org/repository/">Policies & Legal Repository</a>
+                </div>
+            </footer>
+        </main>
+    </div>
+    
+    <script>
+        // Simple script to handle active navigation state
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.sidebar nav a');
+            
+            // Add click event listeners to all navigation links
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // Remove active class from all links
+                    navLinks.forEach(link => link.classList.remove('active'));
+                    
+                    // Add active class to clicked link
+                    this.classList.add('active');
+                });
+            });
+            
+            // Keypoint cards toggle
+            const keypointButtons = document.querySelectorAll('.keypoint-toggle');
+            keypointButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const card = this.parentElement;
+                    card.classList.toggle('expanded');
+                    this.textContent = card.classList.contains('expanded') ? 'Show Less' : 'Learn More';
+                });
+            });
+            
+            // Accordion functionality
+            const accordions = document.querySelectorAll('.accordion-header');
+            accordions.forEach(accordion => {
+                accordion.addEventListener('click', function() {
+                    this.parentElement.classList.toggle('active');
+                    const icon = this.querySelector('i');
+                    icon.classList.toggle('fa-chevron-down');
+                    icon.classList.toggle('fa-chevron-up');
+                });
+            });
+            
+            // Copy button functionality for code blocks
+            const copyButtons = document.querySelectorAll('.copy-btn');
+            copyButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const textToCopy = this.getAttribute('data-clipboard-text');
+                    navigator.clipboard.writeText(textToCopy).then(() => {
+                        // Change button icon temporarily to show success
+                        const icon = this.querySelector('i');
+                        icon.classList.remove('fa-copy');
+                        icon.classList.add('fa-check');
+                        setTimeout(() => {
+                            icon.classList.remove('fa-check');
+                            icon.classList.add('fa-copy');
+                        }, 2000);
+                    });
+                });
+            });
+            
+            // Map point hover effect
+            const mapPoints = document.querySelectorAll('.map-point');
+            mapPoints.forEach(point => {
+                point.addEventListener('mouseenter', function() {
+                    this.classList.add('active');
+                });
+                point.addEventListener('mouseleave', function() {
+                    this.classList.remove('active');
+                });
+            });
+            
+            // Animated counter for statistics
+            const animateValue = (element, start, end, duration) => {
+                let startTimestamp = null;
+                const step = (timestamp) => {
+                    if (!startTimestamp) startTimestamp = timestamp;
+                    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                    const value = Math.floor(progress * (end - start) + start);
+                    element.textContent = value + 'M+';
+                    if (progress < 1) {
+                        window.requestAnimationFrame(step);
+                    }
+                };
+                window.requestAnimationFrame(step);
+            };
+            
+            // Animate websites count when visible
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const element = document.getElementById('websites-count');
+                        animateValue(element, 0, 550, 2000);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            });
+            
+            const statsElement = document.querySelector('.stats-container');
+            if (statsElement) {
+                observer.observe(statsElement);
+            }
+        });
+    </script>
+</body>
+</html>
