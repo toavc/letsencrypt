@@ -20,6 +20,7 @@ build:
       - echo "--- Copying static files ---"
       - cp -rf _static_html/index.html $READTHEDOCS_OUTPUT/html/index.html
       - cp -rf _static_html/style.css $READTHEDOCS_OUTPUT/html/style.css
+      - cp -rf _static_html/Letsencrypt-logo-horizontal.svg $READTHEDOCS_OUTPUT/html/Letsencrypt-logo-horizontal.svg
       # Add cp commands for EACH other asset here if needed in the future:
       # - cp -rf _static_html/page2.html $READTHEDOCS_OUTPUT/html/page2.html
       # - cp -rf _static_html/script.js $READTHEDOCS_OUTPUT/html/script.js
